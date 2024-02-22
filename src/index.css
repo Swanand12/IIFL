@@ -1,13 +1,60 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*NAVBAR STYLING */
+#navbar {
+  background-color: #1e59a9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#nav_logo img {
+  height: 3.8rem;
+  width: 15rem;
+}
+
+#nav_menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+}
+
+#nav_menu li {
+  padding: 0 1rem;
+}
+
+#nav_menu li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#nav_menu li a:hover {
+  color: #add8e6;
+}
+
+.nav_menu_dropdown {
+  position: absolute;
+  top: 4.25rem;
+  width: 13rem;
+  background-color: red;
+}
+
+.nav_menu_dropdown li {
+  height: 2.5rem;
+  color: black;
+  background-color: #6ec1e4;
+  margin: 0.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav_menu_dropdown li a {
+  color: black;
 }
