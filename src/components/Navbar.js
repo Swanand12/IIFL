@@ -1,20 +1,26 @@
 function Navbar() {
   return (
-    <div id="navbar" className="flex ">
-      <div id="nav_logo">
-        <img src="../../Images/logo.png" alt="logo.png" />
+    <div className="flex bg-sky-700 flex-row justify-around p-2 text-sm font-semibold text-white">
+      <div>
+        <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
       </div>
-      <div id="nav_menu">
+      <div className="flex flex-row items-center list-none space-x-10">
         <li>
-          <a href="a">HOME</a>
+          <a href="a" className="hover:text-cyan-300">
+            HOME
+          </a>
         </li>
         <li>
-          <a href="a">ABOUT US</a>
-          <div className="nav_menu_dropdown">
-            <li className="dropmenu">
-              <a href="a">Overview</a>
+          <a href="a" className="hover:text-cyan-300">
+            ABOUT US
+          </a>
+          <div className="absolute top-17 bg-white z-10">
+            <li className="mb-px text-black">
+              <a href="a" className="">
+                Overview
+              </a>
             </li>
-            <li>
+            <li className="my-px text-black">
               <a href="a">Why Waterfront?</a>
             </li>
             <li>
@@ -23,19 +29,29 @@ function Navbar() {
           </div>
         </li>
         <li>
-          <a href="a">INVESTMENTS</a>
+          <a href="a" className="hover:text-cyan-300">
+            INVESTMENTS
+          </a>
         </li>
         <li>
-          <a href="a">LOANS</a>
+          <a href="a" className="hover:text-cyan-300">
+            LOANS
+          </a>
         </li>
         <li>
-          <a href="a">WORK WITH US</a>
+          <a href="a" className="hover:text-cyan-300">
+            WORK WITH US
+          </a>
         </li>
         <li>
-          <a href="a">REACH US</a>
+          <a href="a" className="hover:text-cyan-300">
+            REACH US
+          </a>
         </li>
         <li>
-          <a href="a">CLIENT LOGIN</a>
+          <a href="a" className="hover:text-cyan-300">
+            CLIENT LOGIN
+          </a>
         </li>
       </div>
     </div>
