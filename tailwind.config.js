@@ -6,6 +6,9 @@ module.exports = {
       screens: {
         lg: "1130px",
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
