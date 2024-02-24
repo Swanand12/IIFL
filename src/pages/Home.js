@@ -1,11 +1,12 @@
-import Navbar from "../components/Navbar";
+// import Navbar from "../components/Navbar";
+import WhatsApp from "../components/WhatsApp";
 import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <div>
-      <Navbar />
-
+    <div class="home  ">
+      {/* <Navbar /> */}
+      {/* 
       <div
         id="default-carousel"
         class="relative w-full bg-slate-400"
@@ -133,7 +134,8 @@ function Home() {
             <span class="sr-only">Next</span>
           </span>
         </button>
-      </div>
+      </div> */}
+      <WhatsApp />
       <Footer />
     </div>
   );
