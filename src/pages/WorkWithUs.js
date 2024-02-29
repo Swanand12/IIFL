@@ -1,29 +1,32 @@
 import { useState } from "react";
+import Navbar from "../components/Navbar";
+import WhatsApp from "../components/WhatsApp";
+import Footer from "../components/Footer";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 export default function WorkWithUs() {
-  const [selected, setSelected] = useState("");
-  // const [multiple,setMultiple] = useState([])
-  const togglrdropdown = (event) => {
-    setSelected(
-      event.target.textContent === selected ? null : event.target.textContent
-    );
-    console.log(event.target.value);
-  };
+  const [selected, setSelected] = useState([false, false, false]);
+
   return (
     <>
-      <div class="work_with_us w-full m-[2rem] flex flex-col md:flex-row">
-        <div class="work_with_us-left w-full md:w-1/2 p-4">
-          <div class="work_with_us-box-slider w-[90%]">
-            <div class="box-slider group p-4 border border-black ">
+      <Navbar />
+      <div class="work_with_us m-[1rem] mb-[5rem] flex flex-col md:flex-row text-[14px]">
+        <div class="work_with_us-left   md:w-1/2 m-[2rem]">
+          <div class="work_with_us-box-slider ">
+            <div class="box-slider group p-3 border border-black ">
               <h2
-                onClick={togglrdropdown}
+                onClick={() =>
+                  setSelected((arr) => [...arr, (arr[0] = !arr[0])])
+                }
                 name="employment"
-                class="font-bold text-lg"
+                class="font-bold "
               >
+                {selected[0] ? <ExpandMoreIcon /> : <ExpandLessIcon />}
                 Employment
               </h2>
-              {selected === "Employment" ? (
-                <div class="box-1 text-lg">
+              {selected[0] ? (
+                <div class="box-1 ">
                   <ul className="employment-content">
                     <br></br>
                     <li>
@@ -48,14 +51,22 @@ export default function WorkWithUs() {
                     </li>
                   </ul>
                 </div>
-              ) : null}
+              ) : (
+                false
+              )}
             </div>
-            <div class="box-slider group  p-4 border border-black ">
-              <h2 onClick={togglrdropdown} class="font-bold text-lg">
+            <div class="box-slider group  p-3 border border-black ">
+              <h2
+                onClick={() =>
+                  setSelected((arr) => [...arr, (arr[1] = !arr[1])])
+                }
+                class="font-bold "
+              >
+                {selected[1] ? <ExpandMoreIcon /> : <ExpandLessIcon />}
                 Internship
               </h2>
-              {selected === "Internship" ? (
-                <div class="box-2 text-lg">
+              {selected[1] ? (
+                <div class="box-2 ">
                   <ul className="internship-content">
                     <br></br>
                     <li>
@@ -100,14 +111,22 @@ export default function WorkWithUs() {
                     </li>
                   </ul>
                 </div>
-              ) : null}
+              ) : (
+                false
+              )}
             </div>
-            <div class="box-slider group  p-4 border border-black  ">
-              <h2 onClick={togglrdropdown} class="font-bold text-lg">
+            <div class="box-slider group  p-3 border border-black  ">
+              <h2
+                onClick={() =>
+                  setSelected((arr) => [...arr, (arr[2] = !arr[2])])
+                }
+                class="font-bold "
+              >
+                {selected[2] ? <ExpandMoreIcon /> : <ExpandLessIcon />}
                 Referral Partner
               </h2>
-              {selected === "Referral Partner" ? (
-                <div class="box-3 text-lg">
+              {selected[2] ? (
+                <div class="box-3 ">
                   <ul className="referral-partner-content">
                     <br></br>
                     <li>
@@ -136,29 +155,53 @@ export default function WorkWithUs() {
                     </li>
                   </ul>
                 </div>
-              ) : null}
+              ) : (
+                false
+              )}
             </div>
           </div>
         </div>
-        <div class="work_with_us-right flex flex-col w-full md:w-1/2 p-4 text-xl">
-            <div class="w-[90%]">
-            <p>We appreciate your expression of interest towards getting an
-            association with Waterfront Capital. We also congratulate you since
-            your selection here will guarantee you a career with learning and
-            grilling experience. Kindly fill in the details below and submit.</p>
-            <div class="flex flex-col">
-                <input class="w-[100%] placeholder-black border border-black text-lg p-3 rounded-[30px] my-4" placeholder="Name" type="text"/>
-                <input class="w-[100%] placeholder-black border border-black text-lg p-3 rounded-[30px] my-4" placeholder="Email" type="email"/>
-                <input class="w-[100%] placeholder-black border border-black text-lg p-3 rounded-[30px] my-4" placeholder="Phone No." type="text"/>
+        <div class="work_with_us-right flex flex-col md:w-1/2 m-[2rem]">
+          <div class="">
+            <p>
+              We appreciate your expression of interest towards getting an
+              association with Waterfront Capital. We also congratulate you
+              since your selection here will guarantee you a career with
+              learning and grilling experience. Kindly fill in the details below
+              and submit.
+            </p>
+            <div class="flex flex-col mt-5">
+              <input
+                class=" placeholder-black border border-black  p-2 rounded-[30px] my-3"
+                placeholder="Name"
+                type="text"
+              />
+              <input
+                class=" placeholder-black border border-black  p-2 rounded-[30px] my-3"
+                placeholder="Email"
+                type="email"
+              />
+              <input
+                class=" placeholder-black border border-black  p-2 rounded-[30px] my-3"
+                placeholder="Phone No."
+                type="text"
+              />
             </div>
             <div class="flex flex-col">
-                <h2 class="my-4">Resume/CV</h2>
-                <input class="my-4" type="file"/>
-                <button class="border border-black bg-[#1F19A8] text-[#ffffff] px-2 py-2 my-4 rounded-[30px] w-[140px]" type="submit">SUBMIT</button>
+              <h2 class="mt-2">Resume/CV</h2>
+              <input type="file" />
+              <button
+                class="bg-[#1F19A8] text-[#ffffff] py-[6px] mt-6 rounded-[30px] w-[120px]"
+                type="submit"
+              >
+                SUBMIT
+              </button>
             </div>
-            </div>
+          </div>
         </div>
       </div>
+      <WhatsApp />
+      <Footer />
     </>
   );
 }

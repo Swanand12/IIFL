@@ -302,7 +302,7 @@ function Navbar() {
             className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
             onClick={() => setNavBar((arr) => [...arr, (arr[4] = !arr[4])])}
           >
-            <a href="a">WORK WITH US</a>
+            <a href="/work-with-us">WORK WITH US</a>
             {navBar[4] ? (
               <RemoveIcon fontSize="small" />
             ) : (
@@ -321,7 +321,7 @@ function Navbar() {
             </div>
           </div>
           <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
-            <a href="a"> REACH US</a>
+            <a href="/contact-us">CONTACT US</a>
           </div>
           <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
             <a href="a">CLIENT LOGIN</a>
@@ -564,7 +564,7 @@ function Navbar() {
               </div>
             </li>
             <li className="flex items-center h-[4.5rem] group">
-              <a href="a" className="hover:text-cyan-300">
+              <a href="/work-with-us" className="hover:text-cyan-300">
                 WORK WITH US
                 <ExpandMoreIcon fontSize="small" />
               </a>
@@ -583,8 +583,8 @@ function Navbar() {
               </div>
             </li>
             <li>
-              <a href="a" className="hover:text-cyan-300">
-                REACH US
+              <a href="/contact-us" className="hover:text-cyan-300">
+                CONTACT US
               </a>
             </li>
             <li>

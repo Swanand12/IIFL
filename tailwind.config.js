@@ -8,6 +8,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
+        open: ["Open Sans", "sans-serif"]
       },
     },
   },
