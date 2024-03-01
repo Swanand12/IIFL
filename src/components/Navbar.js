@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <>
       {/* FOR SMALL SCREEN DEVICE */}
-      <div className="lg:hidden">
+      <div className="lg:hidden mb-[0.07rem] font-open text-[14px]">
         <div className="flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold text-white">
           <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
@@ -41,7 +41,7 @@ function Navbar() {
             className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
             onClick={() => setNavBar((arr) => [...arr, (arr[1] = !arr[1])])}
           >
-            <a href="a">ABOUT US</a>
+            <a href="/about-us">ABOUT US</a>
             {navBar[1] ? (
               <RemoveIcon fontSize="small" />
             ) : (
@@ -50,13 +50,13 @@ function Navbar() {
           </div>
           <div className={navBar[1] ? "ABOUT US" : "hidden"}>
             <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
-              <a href="a">Overview</a>
+              <a href="/about-us/overview">Overview</a>
             </div>
             <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
-              <a href="a">Why Waterfronts?</a>
+              <a href="/about-us/why_waterfront">Why Waterfronts?</a>
             </div>
             <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
-              <a href="a">Our Team</a>
+              <a href="/about-us/our_team">Our Team</a>
             </div>
           </div>
           <div
@@ -75,7 +75,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[5] = !arr[5])])}
             >
-              <a href="a">Equity</a>
+              <a href="/investment/equity">Equity</a>
               {navBar[5] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -112,7 +112,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[6] = !arr[6])])}
             >
-              <a href="a">Fixed Income</a>
+              <a href="/investment/fixedincome">Fixed Income</a>
               {navBar[6] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -146,7 +146,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[7] = !arr[7])])}
             >
-              <a href="a">Insurance</a>
+              <a href="/investment/insurance">Insurance</a>
               {navBar[7] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -180,7 +180,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[8] = !arr[8])])}
             >
-              <a href="a">Real Estate</a>
+              <a href="/investment/realestate">Real Estate</a>
               {navBar[8] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -211,7 +211,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[9] = !arr[9])])}
             >
-              <a href="a">Residency Programs</a>
+              <a href="/investment/residency">Residency Programs</a>
               {navBar[9] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -239,7 +239,7 @@ function Navbar() {
               className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
               onClick={() => setNavBar((arr) => [...arr, (arr[10] = !arr[10])])}
             >
-              <a href="a">Succession Planning</a>
+              <a href="/investment/succession">Succession Planning</a>
               {navBar[10] ? (
                 <RemoveIcon fontSize="small" />
               ) : (
@@ -265,7 +265,7 @@ function Navbar() {
             className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
             onClick={() => setNavBar((arr) => [...arr, (arr[3] = !arr[3])])}
           >
-            <a href="a">LOANS</a>
+            <a href="/loan">LOANS</a>
             {navBar[3] ? (
               <RemoveIcon fontSize="small" />
             ) : (
@@ -331,44 +331,44 @@ function Navbar() {
 
       {/* FOR LARGE SCREEN DEVICE */}
       <div className="hidden lg:block">
-        <div className="flex bg-sky-700 flex-row justify-around px-2 text-sm font-semibold text-white">
+        <div className="flex bg-sky-700 flex-row justify-around px-2 text-[13px] font-open text-white mb-[0.07rem]">
           <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
           </div>
           <div className="flex max flex-row items-center list-none space-x-10 h-[4.5rem]">
             <li className="flex items-center h-[4.5rem]">
-              <a href="a" className="hover:text-cyan-300">
+              <a href="\" className="hover:text-cyan-300 font-bold">
                 HOME
               </a>
             </li>
             <li className="flex items-center h-[4.5rem] group">
-              <a href="a" className="hover:text-cyan-300">
+              <a href="\about-us" className="hover:text-cyan-300 font-bold">
                 ABOUT US
                 <ExpandMoreIcon fontSize="small" />
               </a>
-              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white z-10 w-52 shadow-md">
+              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white font-normal z-10 w-52 shadow-md">
                 <ul>
                   <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
-                    <a href="a">Overview</a>
+                    <a href="/about-us/overview">Overview</a>
                   </li>
                   <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
-                    <a href="a">Why Waterfront?</a>
+                    <a href="/about-us/why_waterfront">Why Waterfront?</a>
                   </li>
                   <li className="flex items-center px-4 text-black h-10 bg-cyan-100">
-                    <a href="a">Our Team</a>
+                    <a href="/about-us/our_team">Our Team</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li className="flex items-center h-[4.5rem] group/kan">
-              <a href="a" className="hover:text-cyan-300">
+              <a href="a" className="hover:text-cyan-300 font-bold">
                 INVESTMENTS
                 <ExpandMoreIcon fontSize="small" />
               </a>
-              <div className="hidden group-hover/kan:block absolute top-[4.5rem] bg-white z-10 w-52 shadow-md">
+              <div className="hidden group-hover/kan:block absolute top-[4.5rem] bg-white font-normal z-10 w-52 shadow-md">
                 <ul>
                   <li className="flex justify-between group items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
-                    <a href="a">Equity</a>
+                    <a href="/investment/equity">Equity</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[0.1rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -400,7 +400,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="flex justify-between group items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
-                    <a href="a">Fixed Income</a>
+                    <a href="/investment/fixedincome">Fixed Income</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[2.6rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -429,7 +429,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="flex justify-between group items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
-                    <a href="a">Insurance</a>
+                    <a href="/investment/insurance">Insurance</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[5.2rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -458,7 +458,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="flex justify-between group items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
-                    <a href="a">Real Estate</a>
+                    <a href="/investment/realestate">Real Estate</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[7.8rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -484,7 +484,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="flex justify-between group items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
-                    <a href="a">Residency Programs</a>
+                    <a href="/investment/residency">Residency Programs</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[10.4rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -507,7 +507,7 @@ function Navbar() {
                     </div>
                   </li>
                   <li className="flex justify-between group items-center px-4 text-black h-10 bg-cyan-100">
-                    <a href="a">Succession Planning</a>
+                    <a href="/investment/succession">Succession Planning</a>
                     <NavigateNextIcon fontSize="small" />
                     <div className="hidden group-hover:block absolute top-[13rem] left-[13rem] bg-white z-10 w-52 shadow-md">
                       <ul>
@@ -530,11 +530,11 @@ function Navbar() {
               </div>
             </li>
             <li className="flex items-center h-[4.5rem] group">
-              <a href="a" className="hover:text-cyan-300">
+              <a href="/loan" className="hover:text-cyan-300 font-bold">
                 LOANS
                 <ExpandMoreIcon fontSize="small" />
               </a>
-              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white z-10 w-52 shadow-md">
+              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white font-normal z-10 w-52 shadow-md">
                 <ul>
                   <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
                     <a href="a">Loan Against Property</a>
@@ -564,11 +564,11 @@ function Navbar() {
               </div>
             </li>
             <li className="flex items-center h-[4.5rem] group">
-              <a href="/work-with-us" className="hover:text-cyan-300">
+              <a href="/work-with-us" className="hover:text-cyan-300 font-bold">
                 WORK WITH US
                 <ExpandMoreIcon fontSize="small" />
               </a>
-              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white z-10 w-52 shadow-md">
+              <div className="hidden group-hover:block absolute top-[4.5rem] bg-white font-normal z-10 w-52 shadow-md">
                 <ul>
                   <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
                     <a href="a">Employment</a>
@@ -583,12 +583,12 @@ function Navbar() {
               </div>
             </li>
             <li>
-              <a href="/contact-us" className="hover:text-cyan-300">
+              <a href="/contact-us" className="hover:text-cyan-300 font-bold">
                 CONTACT US
               </a>
             </li>
             <li>
-              <a href="a" className="hover:text-cyan-300">
+              <a href="a" className="hover:text-cyan-300 font-bold">
                 CLIENT LOGIN
               </a>
             </li>

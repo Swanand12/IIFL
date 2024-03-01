@@ -10,11 +10,6 @@ import { useState } from "react";
 function Home() {
   const [selected, setSelected] = useState("RESEARCH PLATFORM");
 
-  function showText(e) {
-    setSelected(e.target.textContent);
-    console.log(e.target.textContent);
-  }
-
   return (
     <div className="home">
       <Navbar />
@@ -180,7 +175,7 @@ function Home() {
                       ? "border border-[#034EA2] text-center px-[1rem]"
                       : "border border-[#034EA2] text-center px-[1rem]"
                   }
-                  onClick={showText}
+                  onClick={() => setSelected("RESEARCH PLATFORM")}
                 >
                   <SearchIcon />
                   <h1 className="">RESEARCH PLATFORM</h1>
@@ -191,7 +186,7 @@ function Home() {
                       ? "border border-[#034EA2] text-center px-[1rem]"
                       : "border border-[#034EA2] text-center px-[1rem]"
                   }
-                  onClick={showText}
+                  onClick={() => setSelected("INVESTMENT STRATEGY")}
                 >
                   <LightbulbOutlinedIcon />
                   <h1 className="">INVESTMENT STRATEGY</h1>
@@ -202,7 +197,7 @@ function Home() {
                       ? "border border-[#034EA2] text-center px-[1rem]"
                       : "border border-[#034EA2] text-center px-[1rem]"
                   }
-                  onClick={showText}
+                  onClick={() => setSelected("FUND RECOMMENDATION")}
                 >
                   <CurrencyRupeeIcon />
                   <h1 className="">FUND RECOMMENDATION</h1>
