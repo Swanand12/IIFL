@@ -35,13 +35,13 @@ function Navbar() {
         </div>
         <div className={navBar[0] ? "h-[18.5rem] overflow-scroll" : "hidden"}>
           <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
-            <a href="\">HOME</a>
+            <a href="/">HOME</a>
           </div>
           <div
             className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
             onClick={() => setNavBar((arr) => [...arr, (arr[1] = !arr[1])])}
           >
-            <a href="\about-us">ABOUT US</a>
+            <a href="/about-us">ABOUT US</a>
             {navBar[1] ? (
               <RemoveIcon fontSize="small" />
             ) : (

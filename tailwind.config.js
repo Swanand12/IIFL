@@ -5,10 +5,11 @@ module.exports = {
     extend: {
       screens: {
         lg: "1130px",
+        smd: "968px",
       },
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
-        open: ["Open Sans", "sans-serif"]
+        open: ["Open Sans", "sans-serif"],
       },
     },
   },

@@ -19,17 +19,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/about-us/overview" element={<Overview />} />
-        <Route path="/about-us/why_waterfront" element={<WhyWaterFront />} />
-        <Route path="/about-us/our_team" element={<OurTeam />} />
-        <Route path="/investment/equity" element={<Equity />} />
-        <Route path="/investment/fixedincome" element={<FixedIncome />} />
-        <Route path="/investment/insurance" element={<Insurance />} />
-        <Route path="/investment/realestate" element={<RealEstate />} />
-        <Route path="/investment/residency" element={<Residency />} />
-        <Route path="/investment/succession" element={<Succession />} />
-        <Route path="/loan" element={<Loan />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/work-with-us" element={<WorkWithUs />} />
       </Routes>
