@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "url": "../Images/about-img.png"
+  },
+  {
+    "id": 1,
+    "url": "../Images/fixed_income-img.png"
+  },
+  {
+    "id": 1,
+    "url": "../Images/equity-img.png"
+  },
+  {
+    "id": 1,
+    "url": "../Images/loan-img.png"
+  },
+  {
+    "id": 1,
+    "url": "../Images/real_estate-img.png"
+  }
+]
