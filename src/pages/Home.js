@@ -172,8 +172,8 @@ function Home() {
                 <div
                   className={
                     selected === "RESEARCH PLATFORM"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
+                      ? "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
                   }
                   onClick={() => setSelected("RESEARCH PLATFORM")}
                 >
@@ -183,8 +183,8 @@ function Home() {
                 <div
                   className={
                     selected === "INVESTMENT STRATEGY"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
+                      ? "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
                   }
                   onClick={() => setSelected("INVESTMENT STRATEGY")}
                 >
@@ -194,8 +194,8 @@ function Home() {
                 <div
                   className={
                     selected === "FUND RECOMMENDATION"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
+                      ? "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
                   }
                   onClick={() => setSelected("FUND RECOMMENDATION")}
                 >
@@ -298,7 +298,7 @@ function Home() {
                   </g>
                 </svg>
                 <div className="ml-[1rem] w-[80%]">
-                  <h2 className="text-[18px] font-bold mb-[1rem] mb-[1rem] ">
+                  <h2 className="text-[18px] font-bold mb-[1rem]  ">
                     Confidentiality
                   </h2>
                   <p className="text-[14px] text-[#7A7A7A]">

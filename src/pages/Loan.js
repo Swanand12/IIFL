@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import WhatsApp from "../components/WhatsApp";
 
 export default function Loan() {
   return (
@@ -17,6 +18,7 @@ export default function Loan() {
           <img src="../../Images/loan-content-img.jpg" alt="loan-content" />
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );

@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 export default function RealEstate() {
   return (
@@ -25,6 +26,7 @@ export default function RealEstate() {
           />
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );

@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import WhatsApp from "../components/WhatsApp";
 import Footer from "../components/Footer";
 
 function AboutUs() {
@@ -7,7 +8,7 @@ function AboutUs() {
       <Navbar />
       <div>
         <div
-          className="h-60 bg-cover md:bg-grad bg-center md:bg-[center_-64px] md:h-[25.2rem]"
+          className="h-60 bg-cover bg-center md:bg-[center_-30px] md:h-[25.2rem]"
           style={{
             backgroundImage: 'url("../../Images/about-front.jpg")',
           }}
@@ -43,6 +44,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );

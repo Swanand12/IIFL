@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 function OurTeam() {
   return (
@@ -13,13 +14,13 @@ function OurTeam() {
           }}
         >
           <div className="flex items-center justify-center size-full bg-[#060608] bg-opacity-50">
-            <div className="text-white text-[39px] font-semibold font-open con">
+            <div className="text-white text-[39px] font-semibold font-open ">
               Our Team
             </div>
           </div>
         </div>
         <div className="flex flex-wrap my-14 px-8">
-          <div className="relative items-center flex flex-col box-border w-[100%] md:w-[50%] lg:w-[25%]">
+          <div className=" items-center flex flex-col  w-[100%] md:w-[50%] lg:w-[25%]">
             <div className="w-[70%]">
               <img
                 src="../../Images/WhatsApp_Image1.png"
@@ -121,6 +122,7 @@ function OurTeam() {
           </div>
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );
