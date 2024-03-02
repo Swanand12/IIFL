@@ -7,7 +7,7 @@ function Overview() {
       <Navbar />
       <div>
         <div
-          className="h-60 bg-cover md:bg-grad bg-center md:bg-[center_-75px] md:h-[25.2rem]"
+          className="h-60 bg-cover md:bg-grad bg-center md:bg-[center_-75px] md:h-[25.2rem] animate-slide"
           style={{
             backgroundImage: 'url("../../Images/meeting.jpg")',
           }}

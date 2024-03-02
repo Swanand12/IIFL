@@ -3,7 +3,7 @@ import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 export default function Footer() {
   return (
     <footer class="footer  w-[100%] font-open  pb-3 px-10 bg-blue-300 ">
-      <div class=" list-none flex flex-col md:flex-row justify-between ">
+      <div class="list-none flex flex-col md:flex-row justify-between ">
         {/* <div className="f_left">
         <h4>HEAD OFFICE</h4>
         <div className="f_left_cont">
