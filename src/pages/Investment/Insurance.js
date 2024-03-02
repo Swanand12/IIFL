@@ -8,7 +8,7 @@ function Insurance() {
       <Navbar />
       <div>
         <div
-          className="h-60 bg-cover md:bg-[center_-64px] md:h-[25.2rem]"
+          className="h-60 bg-cover md:bg-grad bg-center md:bg-[center_-5px] md:h-[25.2rem] animate-slide"
           style={{
             backgroundImage: 'url("../../Images/insurance-form.png")',
           }}
@@ -23,7 +23,7 @@ function Insurance() {
           <img src="../../Images/insurance_content-img.jpg" alt="insurance" />
         </div>
       </div>
-      <WhatsApp/>
+      <WhatsApp />
       <Footer />
     </>
   );

@@ -22,23 +22,33 @@ function Navbar() {
   return (
     <>
       {/* FOR SMALL SCREEN DEVICE */}
-      <div className="lg:hidden mb-[0.07rem] font-open text-[14px] ">
-        <div className="flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold text-white">
-          <div className="flex items-center h-[4.5rem] cursor-pointer">
+      <div className="lg:hidden mb-[0.07rem] font-open text-[14px] sticky z-50 top-0">
+        <div className="relative flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold z-20 text-white">
+          <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
           </div>
-          <span className="flex items-center cursor-pointer">
+          <span className="flex items-center">
             <MenuIcon
               onClick={() => setNavBar((arr) => [...arr, (arr[0] = !arr[0])])}
             />
           </span>
         </div>
-        <div className={navBar[0] ? "h-[18.5rem] overflow-scroll cursor-pointer" : "hidden"}>
-          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+        <div
+          className={
+            navBar[0]
+              ? "absolute w-full h-[18.5rem] overflow-scroll translate-y-[0%] z-0 ease-in-out duration-1000 "
+              : "absolute w-full translate-y-[-100%] overflow-hidden z-0 ease-in-out duration-1000"
+          }
+        >
+          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] hover:text-[#1e73be] border-white">
             <a href="/">HOME</a>
           </div>
           <div
-            className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+            className={
+              navBar[1]
+                ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
+            }
             onClick={() => setNavBar((arr) => [...arr, (arr[1] = !arr[1])])}
           >
             <a href="/about-us">ABOUT US</a>
@@ -49,18 +59,22 @@ function Navbar() {
             )}
           </div>
           <div className={navBar[1] ? "ABOUT US" : "hidden"}>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/overview">Overview</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/why_waterfront">Why Waterfronts?</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/our_team">Our Team</a>
             </div>
           </div>
           <div
-            className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+            className={
+              navBar[2]
+                ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+            }
             onClick={() => setNavBar((arr) => [...arr, (arr[2] = !arr[2])])}
           >
             <a href="a">INVESTMENTS</a>
@@ -72,7 +86,11 @@ function Navbar() {
           </div>
           <div className={navBar[2] ? "INVESTMENTS" : "hidden"}>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[5]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[5] = !arr[5])])}
             >
               <a href="/investment/equity">Equity</a>
@@ -83,33 +101,37 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[5] ? "Equity" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Broking</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Mutual Funds</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">PMS</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">AIF</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Offshore Investments</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Structured Products</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Unlisted Shares</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Private Equity</a>
               </div>
             </div>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[6]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[6] = !arr[6])])}
             >
               <a href="/investment/fixedincome">Fixed Income</a>
@@ -120,30 +142,34 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[6] ? "Fixed Income" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Bonds</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Mutual Funds</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">PMS</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">AIF</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">NCD</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Structured Products</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Preference Shares</a>
               </div>
             </div>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[7]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[7] = !arr[7])])}
             >
               <a href="/investment/insurance">Insurance</a>
@@ -154,30 +180,34 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[7] ? "Insurance" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Term Insurance</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">ULIP</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Traditional Plans</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Health Insurance</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Motor Insurance</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">General Insurance</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Group Insurance</a>
               </div>
             </div>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[8]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[8] = !arr[8])])}
             >
               <a href="/investment/realestate">Real Estate</a>
@@ -188,27 +218,31 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[8] ? "Real Estate" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Advisory</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Structured Deal</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">PMS</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">AIF</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Pre-leased Deals</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Offshore Real Estate</a>
               </div>
             </div>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[9]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[9] = !arr[9])])}
             >
               <a href="/investment/residency">Residency Programs</a>
@@ -219,24 +253,28 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[9] ? "Residency Programs" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">EB5 (USA)</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Golden Visa (Europe)</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">UK Residency</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Grenada Citizenship</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Canada Residency</a>
               </div>
             </div>
             <div
-              className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+              className={
+                navBar[10]
+                  ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                  : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+              }
               onClick={() => setNavBar((arr) => [...arr, (arr[10] = !arr[10])])}
             >
               <a href="/investment/succession">Succession Planning</a>
@@ -247,22 +285,26 @@ function Navbar() {
               )}
             </div>
             <div className={navBar[10] ? "Succession Planning" : "hidden"}>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Wills</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Trust</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Inheritence</a>
               </div>
-              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+              <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
                 <a href="a">Text Planning</a>
               </div>
             </div>
           </div>
           <div
-            className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+            className={
+              navBar[3]
+                ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
+            }
             onClick={() => setNavBar((arr) => [...arr, (arr[3] = !arr[3])])}
           >
             <a href="/loan">LOANS</a>
@@ -273,33 +315,37 @@ function Navbar() {
             )}
           </div>
           <div className={navBar[3] ? " LOANS" : "hidden"}>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Loan Against Property</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Loan Against Securities</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Home Loan</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Business Loan</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Working Capital</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Lease Rental Discounting</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">ESOP Funding</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">IPO Funding</a>
             </div>
           </div>
           <div
-            className="flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]"
+            className={
+              navBar[4]
+                ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
+                : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
+            }
             onClick={() => setNavBar((arr) => [...arr, (arr[4] = !arr[4])])}
           >
             <a href="/work-with-us">WORK WITH US</a>
@@ -310,33 +356,33 @@ function Navbar() {
             )}
           </div>
           <div className={navBar[4] ? "WORK WITH US" : "hidden"}>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Employment</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Internship</a>
             </div>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="a">Referral Partner</a>
             </div>
           </div>
-          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
             <a href="/contact-us">CONTACT US</a>
           </div>
-          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
+          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
             <a href="a">CLIENT LOGIN</a>
           </div>
         </div>
       </div>
 
       {/* FOR LARGE SCREEN DEVICE */}
-      <div className="hidden lg:block sticky z-10 top-0">
+      <div className="hidden lg:block sticky top-0 z-50 scroll-[2rem]:opacity-70">
         <div className="flex bg-sky-700 flex-row justify-around px-2 text-[13px] font-open text-white mb-[0.07rem]">
           <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
           </div>
           <div className="flex max flex-row items-center list-none space-x-10 h-[4.5rem]">
-            <li className="flex items-center h-[4.5rem] ">
+            <li className="flex items-center h-[4.5rem]">
               <a href="\" className="hover:text-cyan-300 font-bold">
                 HOME
               </a>

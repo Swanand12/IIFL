@@ -8,7 +8,7 @@ function FixedIncome() {
       <Navbar />
       <div>
         <div
-          className="h-60 bg-cover md:h-[25.2rem]"
+          className="h-60 bg-cover md:bg-grad bg-center md:bg-[center_-5px] md:h-[25.2rem] animate-slide"
           style={{
             backgroundImage: 'url("../../Images/FixedIncome-1.png")',
           }}
@@ -26,7 +26,7 @@ function FixedIncome() {
           />
         </div>
       </div>
-      <WhatsApp/>
+      <WhatsApp />
       <Footer />
     </>
   );

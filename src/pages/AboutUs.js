@@ -8,7 +8,7 @@ function AboutUs() {
       <Navbar />
       <div>
         <div
-          className="h-60 bg-cover bg-center md:bg-[center_-30px] md:h-[25.2rem]"
+          className="h-60 bg-cover bg-center md:bg-[center_-64px] md:h-[25.2rem] animate-slide"
           style={{
             backgroundImage: 'url("../../Images/about-front.jpg")',
           }}
@@ -16,7 +16,7 @@ function AboutUs() {
           <div className="size-full bg-[#03022C] opacity-50"></div>
         </div>
         <div className="flex flex-col md:flex-row md:px-10 p-3 box-border text-[14px] font-sans">
-          <div className="flex-1 flex items-start p-3">
+          <div className="flex-1 flex items-start p-3 animate-slideleft">
             <div>
               <h2 className="mb-5 text-[20px] font-open md:pt-12 font-bold">
                 Overview
@@ -35,7 +35,7 @@ function AboutUs() {
               </p>
             </div>
           </div>
-          <div className="flex-1 flex items-center justify-center p-3">
+          <div className="flex-1 flex items-center justify-center p-3 animate-slideright">
             <img
               src="../../Images/about-overview-img.jpg"
               alt="overview"
@@ -44,7 +44,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
-      <WhatsApp/>
+      <WhatsApp />
       <Footer />
     </>
   );

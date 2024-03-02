@@ -298,7 +298,7 @@ function Home() {
                   </g>
                 </svg>
                 <div className="ml-[1rem] w-[80%]">
-                  <h2 className="text-[18px] font-bold mb-[1rem]  ">
+                  <h2 className="text-[18px] font-bold mb-[1rem] ">
                     Confidentiality
                   </h2>
                   <p className="text-[14px] text-[#7A7A7A]">
