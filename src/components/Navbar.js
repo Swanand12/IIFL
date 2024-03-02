@@ -29,7 +29,21 @@ function Navbar() {
           </div>
           <span className="flex items-center">
             <MenuIcon
-              onClick={() => setNavBar((arr) => [...arr, (arr[0] = !arr[0])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  !arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  arr[6],
+                  arr[7],
+                  arr[8],
+                  arr[9],
+                  arr[10],
+                ])
+              }
             />
           </span>
         </div>
@@ -49,7 +63,21 @@ function Navbar() {
                 ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                 : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
             }
-            onClick={() => setNavBar((arr) => [...arr, (arr[1] = !arr[1])])}
+            onClick={() =>
+              setNavBar((arr) => [
+                arr[0],
+                !arr[1],
+                arr[2],
+                arr[3],
+                arr[4],
+                arr[5],
+                arr[6],
+                arr[7],
+                arr[8],
+                arr[9],
+                arr[10],
+              ])
+            }
           >
             <a href="/about-us">ABOUT US</a>
             {navBar[1] ? (
@@ -75,7 +103,21 @@ function Navbar() {
                 ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                 : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
             }
-            onClick={() => setNavBar((arr) => [...arr, (arr[2] = !arr[2])])}
+            onClick={() =>
+              setNavBar((arr) => [
+                arr[0],
+                arr[1],
+                !arr[2],
+                arr[3],
+                arr[4],
+                arr[5],
+                arr[6],
+                arr[7],
+                arr[8],
+                arr[9],
+                arr[10],
+              ])
+            }
           >
             <a href="a">INVESTMENTS</a>
             {navBar[2] ? (
@@ -91,7 +133,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[5] = !arr[5])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  !arr[5],
+                  arr[6],
+                  arr[7],
+                  arr[8],
+                  arr[9],
+                  arr[10],
+                ])
+              }
             >
               <a href="/investment/equity">Equity</a>
               {navBar[5] ? (
@@ -132,7 +188,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[6] = !arr[6])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  !arr[6],
+                  arr[7],
+                  arr[8],
+                  arr[9],
+                  arr[10],
+                ])
+              }
             >
               <a href="/investment/fixedincome">Fixed Income</a>
               {navBar[6] ? (
@@ -170,7 +240,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[7] = !arr[7])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  arr[6],
+                  !arr[7],
+                  arr[8],
+                  arr[9],
+                  arr[10],
+                ])
+              }
             >
               <a href="/investment/insurance">Insurance</a>
               {navBar[7] ? (
@@ -208,7 +292,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[8] = !arr[8])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  arr[6],
+                  arr[7],
+                  !arr[8],
+                  arr[9],
+                  arr[10],
+                ])
+              }
             >
               <a href="/investment/realestate">Real Estate</a>
               {navBar[8] ? (
@@ -243,7 +341,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[9] = !arr[9])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  arr[6],
+                  arr[7],
+                  arr[8],
+                  !arr[9],
+                  arr[10],
+                ])
+              }
             >
               <a href="/investment/residency">Residency Programs</a>
               {navBar[9] ? (
@@ -275,7 +387,21 @@ function Navbar() {
                   ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                   : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
               }
-              onClick={() => setNavBar((arr) => [...arr, (arr[10] = !arr[10])])}
+              onClick={() =>
+                setNavBar((arr) => [
+                  arr[0],
+                  arr[1],
+                  arr[2],
+                  arr[3],
+                  arr[4],
+                  arr[5],
+                  arr[6],
+                  arr[7],
+                  arr[8],
+                  arr[9],
+                  !arr[10],
+                ])
+              }
             >
               <a href="/investment/succession">Succession Planning</a>
               {navBar[10] ? (
@@ -305,7 +431,21 @@ function Navbar() {
                 ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                 : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]"
             }
-            onClick={() => setNavBar((arr) => [...arr, (arr[3] = !arr[3])])}
+            onClick={() =>
+              setNavBar((arr) => [
+                arr[0],
+                arr[1],
+                arr[2],
+                !arr[3],
+                arr[4],
+                arr[5],
+                arr[6],
+                arr[7],
+                arr[8],
+                arr[9],
+                arr[10],
+              ])
+            }
           >
             <a href="/loan">LOANS</a>
             {navBar[3] ? (
@@ -346,7 +486,21 @@ function Navbar() {
                 ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
                 : "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] "
             }
-            onClick={() => setNavBar((arr) => [...arr, (arr[4] = !arr[4])])}
+            onClick={() =>
+              setNavBar((arr) => [
+                arr[0],
+                arr[1],
+                arr[2],
+                arr[3],
+                !arr[4],
+                arr[5],
+                arr[6],
+                arr[7],
+                arr[8],
+                arr[9],
+                arr[10],
+              ])
+            }
           >
             <a href="/work-with-us">WORK WITH US</a>
             {navBar[4] ? (

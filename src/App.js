@@ -32,8 +32,6 @@ function App() {
         <Route path="/loan" element={<Loan />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/work-with-us" element={<WorkWithUs />} />
-        <Route path="/contact-us" element={<ContactUs />} />
-        <Route path="/work-with-us" element={<WorkWithUs />} />
       </Routes>
     </BrowserRouter>
   );
