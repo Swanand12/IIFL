@@ -16,9 +16,7 @@ export default function WorkWithUs() {
           <div class="work_with_us-box-slider ">
             <div class="box-slider group p-3 border border-black ">
               <h2
-                onClick={() =>
-                  setSelected((arr) => [...arr, (arr[0] = !arr[0])])
-                }
+                onClick={() => setSelected((arr) => [!arr[0], arr[1], arr[2]])}
                 name="employment"
                 class="font-bold "
               >
@@ -57,9 +55,7 @@ export default function WorkWithUs() {
             </div>
             <div class="box-slider group  p-3 border border-black ">
               <h2
-                onClick={() =>
-                  setSelected((arr) => [...arr, (arr[1] = !arr[1])])
-                }
+                onClick={() => setSelected((arr) => [arr[0], !arr[1], arr[2]])}
                 class="font-bold "
               >
                 {selected[1] ? <ExpandMoreIcon /> : <ExpandLessIcon />}
@@ -117,9 +113,7 @@ export default function WorkWithUs() {
             </div>
             <div class="box-slider group  p-3 border border-black  ">
               <h2
-                onClick={() =>
-                  setSelected((arr) => [...arr, (arr[2] = !arr[2])])
-                }
+                onClick={() => setSelected((arr) => [arr[0], arr[1], !arr[2]])}
                 class="font-bold "
               >
                 {selected[2] ? <ExpandMoreIcon /> : <ExpandLessIcon />}
