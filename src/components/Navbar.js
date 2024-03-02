@@ -22,25 +22,19 @@ function Navbar() {
   return (
     <>
       {/* FOR SMALL SCREEN DEVICE */}
-      <div className="lg:hidden mb-[0.07rem] font-open text-[14px] sticky z-50 top-0">
-        <div className="relative flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold z-20 text-white">
+      <div className="lg:hidden mb-[0.07rem] font-open text-[14px]">
+        <div className="flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold text-white">
           <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
           </div>
-          <span className="flex items-center">
+          <span className="flex items-center cursor-pointer">
             <MenuIcon
               onClick={() => setNavBar((arr) => [...arr, (arr[0] = !arr[0])])}
             />
           </span>
         </div>
-        <div
-          className={
-            navBar[0]
-              ? "absolute w-full h-[18.5rem] overflow-scroll translate-y-[0%] z-0 ease-in-out duration-1000 "
-              : "absolute w-full translate-y-[-100%] overflow-hidden z-0 ease-in-out duration-1000"
-          }
-        >
-          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] hover:text-[#1e73be] border-white">
+        <div className={navBar[0] ? "h-[18.5rem] overflow-scroll" : "hidden"}>
+          <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 mb-[1.5px]">
             <a href="/">HOME</a>
           </div>
           <div
@@ -376,13 +370,13 @@ function Navbar() {
       </div>
 
       {/* FOR LARGE SCREEN DEVICE */}
-      <div className="hidden lg:block sticky top-0 z-50 scroll-[2rem]:opacity-70">
+      <div className="hidden lg:block">
         <div className="flex bg-sky-700 flex-row justify-around px-2 text-[13px] font-open text-white mb-[0.07rem]">
           <div className="flex items-center h-[4.5rem]">
             <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
           </div>
           <div className="flex max flex-row items-center list-none space-x-10 h-[4.5rem]">
-            <li className="flex items-center h-[4.5rem]">
+            <li className="flex items-center h-[4.5rem] ">
               <a href="\" className="hover:text-cyan-300 font-bold">
                 HOME
               </a>

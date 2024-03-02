@@ -170,40 +170,40 @@ function Home() {
             <div className=" border border-[#034EA2] w-[100%] smd:m-[5rem]">
               <div className="flex  flex-col smd:flex-row m-[0.5rem]  text-[#034EA2]">
                 <div
-                  className={
+                  className={`transition-all duration-500 ${
                     selected === "RESEARCH PLATFORM"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
-                  }
+                      ? "border bg-[#034EA2] text-[#ffffff] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                  }`}
                   onClick={() => setSelected("RESEARCH PLATFORM")}
                 >
                   <SearchIcon />
                   <h1 className="">RESEARCH PLATFORM</h1>
                 </div>
                 <div
-                  className={
+                  className={`transition-all duration-500 ${
                     selected === "INVESTMENT STRATEGY"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
-                  }
+                      ? "border  bg-[#034EA2] text-[#ffffff] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                  }`}
                   onClick={() => setSelected("INVESTMENT STRATEGY")}
                 >
                   <LightbulbOutlinedIcon />
                   <h1 className="">INVESTMENT STRATEGY</h1>
                 </div>
                 <div
-                  className={
+                  className={`transition-all duration-500 ${
                     selected === "FUND RECOMMENDATION"
-                      ? "border border-[#034EA2] text-center px-[1rem]"
-                      : "border border-[#034EA2] text-center px-[1rem]"
-                  }
+                      ? "border bg-[#034EA2] text-[#ffffff] cursor-pointer text-center px-[1rem]"
+                      : "border border-[#034EA2] cursor-pointer text-center px-[1rem]"
+                  }`}
                   onClick={() => setSelected("FUND RECOMMENDATION")}
                 >
                   <CurrencyRupeeIcon />
                   <h1 className="">FUND RECOMMENDATION</h1>
                 </div>
               </div>
-              <div className="flex relative m-[1rem]">
+              <div className="flex relative m-[1rem] ">
                 {selected === "RESEARCH PLATFORM" ? (
                   <p>
                     Clients receive insights from our research desk which is one

@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 function Residency() {
   return (
@@ -25,6 +26,7 @@ function Residency() {
           />
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );

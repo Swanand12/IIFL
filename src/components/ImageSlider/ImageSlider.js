@@ -19,15 +19,15 @@ export default function ImageSlider() {
   }
   return (
     <>
-      <div class="ImageSlider flex justify-center items-center relative w-[100%]">
+      <div class="ImageSlider flex justify-center items-center relative w-[100%] ">
         <ArrowBackIosIcon
           onClick={handlePrevious}
-          className="absolute text-[black] left-[1rem]"
+          className="absolute text-[black] cursor-pointer left-[1rem]"
         />
         {dummyData && dummyData.length
           ? dummyData.map((item, index) => (
               <img
-                className={currentSlide === index ? "current-image" : "hidden"}
+                className={currentSlide === index ? "current-image h-60 md:h-[25.2rem] object-cover " : "hidden"}
                 key={item.id}
                 src={item.url}
                 alt={item.url}
@@ -36,9 +36,9 @@ export default function ImageSlider() {
           : null}
         <ArrowForwardIosIcon
           onClick={handleNext}
-          className="absolute text-[black] right-[1rem]"
+          className="absolute text-[black] cursor-pointer right-[1rem]"
         />
-        <span className="flex absolute bottom-[1rem]  z-10">
+        <span className="flex absolute bottom-[1rem] ">
           {dummyData && dummyData.length > 0
             ? dummyData.map((_, index) => (
                 <button

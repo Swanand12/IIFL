@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import WhatsApp from "../components/WhatsApp";
 import Footer from "../components/Footer";
 
 function AboutUs() {
@@ -43,6 +44,7 @@ function AboutUs() {
           </div>
         </div>
       </div>
+      <WhatsApp />
       <Footer />
     </>
   );

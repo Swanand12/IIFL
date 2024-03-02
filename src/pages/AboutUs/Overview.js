@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar";
+import WhatsApp from "../../components/WhatsApp";
 import Footer from "../../components/Footer";
 
 function Overview() {
@@ -48,6 +49,7 @@ function Overview() {
           </div>
         </div>
       </div>
+      <WhatsApp />
       <Footer />
     </>
   );

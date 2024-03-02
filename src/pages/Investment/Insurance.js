@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 function Insurance() {
   return (
@@ -13,7 +14,7 @@ function Insurance() {
           }}
         >
           <div className="flex items-center justify-center size-full bg-[#464684] bg-opacity-50">
-            <div className="text-white text-[60px] font-semibold font-open con">
+            <div className="text-white text-[60px] font-semibold font-open">
               Insurance
             </div>
           </div>
@@ -22,6 +23,7 @@ function Insurance() {
           <img src="../../Images/insurance_content-img.jpg" alt="insurance" />
         </div>
       </div>
+      <WhatsApp />
       <Footer />
     </>
   );

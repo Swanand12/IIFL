@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 function WhyWaterFront() {
   return (
@@ -22,6 +23,7 @@ function WhyWaterFront() {
           <img src="../../Images/81.jpg" alt="81" />
         </div>
       </div>
+      <WhatsApp/>
       <Footer />
     </>
   );

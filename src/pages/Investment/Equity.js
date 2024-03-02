@@ -1,5 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import WhatsApp from "../../components/WhatsApp";
 
 function Equity() {
   return (
@@ -16,6 +17,7 @@ function Equity() {
           <img src="../../Images/equity-content-img.jpg" alt="equity" />
         </div>
       </div>
+      <WhatsApp />
       <Footer />
     </>
   );
