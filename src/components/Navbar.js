@@ -24,8 +24,11 @@ function Navbar() {
       {/* FOR SMALL SCREEN DEVICE */}
       <div className="lg:hidden mb-[0.07rem] font-open text-[14px] sticky z-50 top-0">
         <div className="relative flex bg-sky-700 flex-row justify-between px-16 text-sm font-semibold z-20 text-white">
-          <div className="flex items-center h-[4.5rem]">
-            <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
+          <div className="flex items-center h-[4.5rem] text-[32px] ">
+            {/* <img src="../../Images/logo.png" className="h-14" alt="logo.png" /> */}
+            <a href="/">
+            FinWin.com
+            </a>
           </div>
           <span className="flex items-center">
             <MenuIcon
@@ -87,12 +90,12 @@ function Navbar() {
             )}
           </div>
           <div className={navBar[1] ? "ABOUT US" : "hidden"}>
-            <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
+            {/* <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/overview">Overview</a>
             </div>
             <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/why_waterfront">Why Waterfronts?</a>
-            </div>
+            </div> */}
             <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
               <a href="/about-us/our_team">Our Team</a>
             </div>
@@ -480,7 +483,7 @@ function Navbar() {
               <a href="a">IPO Funding</a>
             </div>
           </div>
-          <div
+          {/* <div
             className={
               navBar[4]
                 ? "flex justify-between items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be] text-[#1e73be]"
@@ -522,7 +525,7 @@ function Navbar() {
           </div>
           <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
             <a href="/contact-us">CONTACT US</a>
-          </div>
+          </div> */}
           <div className="flex items-center h-10 py-6 px-8 bg-cyan-100 border-b-[1px] border-white hover:text-[#1e73be]">
             <a href="a">CLIENT LOGIN</a>
           </div>
@@ -532,8 +535,11 @@ function Navbar() {
       {/* FOR LARGE SCREEN DEVICE */}
       <div className="hidden lg:block sticky top-0 z-50 scroll-[2rem]:opacity-70">
         <div className="flex bg-sky-700 flex-row justify-around px-2 text-[13px] font-open text-white mb-[0.07rem]">
-          <div className="flex items-center h-[4.5rem]">
-            <img src="../../Images/logo.png" className="h-14" alt="logo.png" />
+          <div className="flex items-center font-semibold text-[32px]">
+            {/* <img src="../../Images/logo.png" className="h-14" alt="logo.png" /> */}
+            <a href="/">
+            FinWin.com
+            </a>
           </div>
           <div className="flex max flex-row items-center list-none space-x-10 h-[4.5rem]">
             <li className="flex items-center h-[4.5rem]">
@@ -548,12 +554,12 @@ function Navbar() {
               </a>
               <div className="hidden group-hover:block absolute top-[4.5rem] bg-white font-normal z-10 w-52 shadow-md">
                 <ul>
-                  <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
+                  {/* <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100 border-t-2 border-blue-950">
                     <a href="/about-us/overview">Overview</a>
                   </li>
                   <li className="flex items-center px-4 mb-[1.5px] text-black h-10 bg-cyan-100">
                     <a href="/about-us/why_waterfront">Why Waterfront?</a>
-                  </li>
+                  </li> */}
                   <li className="flex items-center px-4 text-black h-10 bg-cyan-100">
                     <a href="/about-us/our_team">Our Team</a>
                   </li>
@@ -763,7 +769,7 @@ function Navbar() {
                 </ul>
               </div>
             </li>
-            <li className="flex items-center h-[4.5rem] group">
+            {/* <li className="flex items-center h-[4.5rem] group">
               <a href="/work-with-us" className="hover:text-cyan-300 font-bold">
                 WORK WITH US
                 <ExpandMoreIcon fontSize="small" />
@@ -781,12 +787,12 @@ function Navbar() {
                   </li>
                 </ul>
               </div>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href="/contact-us" className="hover:text-cyan-300 font-bold">
                 CONTACT US
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="a" className="hover:text-cyan-300 font-bold">
                 CLIENT LOGIN
